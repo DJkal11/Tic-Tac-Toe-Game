@@ -1,8 +1,9 @@
 
-function Block() {
+
+function Block({props}) {
     return (
-      <button className="Block">
-        <h1>X</h1>
+      <button className="Block" onClick={props.handleClick}>
+        <h1>{props.value}</h1>
       </button>
     );
   }

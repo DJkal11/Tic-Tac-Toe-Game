@@ -5,7 +5,7 @@
 .Block {
   width: 10em;
   height: 10em;
- 
+ background-color: aqua;
 }
 
 .Board {
