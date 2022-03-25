@@ -7,6 +7,8 @@ function Board(){
 const arr = new Array(9).fill(null);
 const [block, setBlock] = useState(arr)
 const [isCondition, setCondition] = useState(true);
+const winningPlayer = determineWinner(block);
+let setWinner = "";
 
  function handleClick(position) {
 if (determineWinner(block) || block[position]) {
@@ -19,7 +21,17 @@ if (determineWinner(block) || block[position]) {
   }
   setBlock(block);
   setCondition(!isCondition);
+ 
  } 
+
+
+    
+    if(winningPlayer){
+        setWinner= "Player "+winningPlayer+" wins!";
+    } else {
+        setWinner= "Player "+ (isCondition ? "X" : "O") + " turn!";
+    }
+
 
  function determineWinner(block){
     const CombonationWins = [
@@ -43,6 +55,12 @@ if (determineWinner(block) || block[position]) {
     
  }
 
+
+ function Restart(){
+    setBlock(Array(9).fill(null));
+    setCondition(true);
+  }
+
   return (
       
    <div className="Board">
@@ -64,6 +82,8 @@ if (determineWinner(block) || block[position]) {
          <Block value={block[8]} onClick={() => handleClick(8)}/>
      </div>
 
+   <div><h1>{setWinner}</h1></div>
+   <button className="restart" onClick={Restart}>Restart Game!</button>
    </div>
   )
 
