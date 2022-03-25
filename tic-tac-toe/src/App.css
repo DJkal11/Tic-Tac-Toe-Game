@@ -5,9 +5,10 @@
 .Block {
   width: 10em;
   height: 10em;
- background-color: aqua;
+ background-color: rgb(255, 153, 0);
 }
 
 .Board {
   margin-top: 10em;
+  background-color: bisque;
 }

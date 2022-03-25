@@ -1,6 +1,6 @@
+import React from "react";
 
-
-function Block({props}) {
+function Block(props) {
     return (
       <button className="Block" onClick={props.handleClick}>
         <h1>{props.value}</h1>
