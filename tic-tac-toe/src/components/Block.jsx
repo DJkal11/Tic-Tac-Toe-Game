@@ -1,12 +1,12 @@
-
-   
+ 
 import React from "react";
+import Button from '@mui/material/Button';
 
 function Block({value, onClick}) {
     return (
-      <button className="Block" onClick={onClick}>
+      <Button variant="outlined" className="Block" onClick={onClick}>
         <h1>{value}</h1>
-      </button>
+      </Button>
     );
   }
 

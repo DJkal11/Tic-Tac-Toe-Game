@@ -9,6 +9,26 @@
 }
 
 .Board {
-  margin-top: 10em;
-  background-color: bisque;
+  margin-top: 5em;
+  
+}
+
+.Title {
+ font-size: 5em;
+}
+
+.tic{
+  color: #FF6B6B;
+}
+
+.tac {
+  color: #FFD93D;
+}
+
+.toe {
+  color: #6BCB77;
+}
+
+.player-text{
+  color: rgb(255, 8, 0);
 }

@@ -1,6 +1,6 @@
 import Block from "./Block";
 import { useState } from 'react';
-
+import Button from '@mui/material/Button';
 
 
 function Board(){
@@ -64,6 +64,7 @@ if (determineWinner(block) || block[position]) {
   return (
       
    <div className="Board">
+       <h1 className="Title"><span className="tic">Tic </span><span className="tac">Tac </span><span className="toe">Toe</span></h1>
      <div>
          <Block value={block[0]} onClick={() => handleClick(0)}/>
          <Block value={block[1]} onClick={() => handleClick(1)}/>
@@ -82,8 +83,8 @@ if (determineWinner(block) || block[position]) {
          <Block value={block[8]} onClick={() => handleClick(8)}/>
      </div>
 
-   <div><h1>{setWinner}</h1></div>
-   <button className="restart" onClick={Restart}>Restart Game!</button>
+   <div><h1 className="player-text">{setWinner}</h1></div>
+   <Button variant="contained" color="primary" onClick={Restart}>Restart Game!</Button>
    </div>
   )
 
