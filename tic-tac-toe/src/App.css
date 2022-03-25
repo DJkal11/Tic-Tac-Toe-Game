@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.Block {
+  width: 10em;
+  height: 10em;
+ 
+}
+
+.Board {
+  margin-top: 10em;
+}
